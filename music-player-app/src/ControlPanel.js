@@ -3,11 +3,11 @@ function ControlPanel() {
     return (
         <div className="controlpanel">
                 <ul id="control-btns">
-                    <li><a id="play" className="btn"><i className="fas fa-play"></i></a></li>
-                    <li><a id="backward" className="btn"><i className="fas fa-step-backward"></i></a></li>
-                    <li><a id="forward" className="btn"><i className="fas fa-step-forward"></i></a></li>
-                    <li><a id="stop" className="btn"><i className="fas fa-stop"></i></a></li>
-                    <li><a id="pause" className="btn"><i className="fas fa-pause"></i></a></li>
+                    <li><button id="play_" className="btn"><i className="fas fa-play"></i></button></li>
+                    <li><button id="backward_" className="btn"><i className="fas fa-step-backward"></i></button></li>
+                    <li><button id="forward_" className="btn"><i className="fas fa-step-forward"></i></button></li>
+                    <li><button id="stop_" className="btn"><i className="fas fa-stop"></i></button></li>
+                    <li><button id="pause_" className="btn"><i className="fas fa-pause"></i></button></li>
                 </ul>
             </div>
     )
