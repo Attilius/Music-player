@@ -77,4 +77,108 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.track-info {
+    width: 300px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+}
+
+.track-info > p {
+    color: white;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px;
+    /*background: rgb(44, 44, 44);*/
+    background: linear-gradient(150deg,rgb(44, 44, 44), rgb(88, 88, 88));
+    color: rgb(33, 33, 33);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgb(33, 33, 33);;
+}
+
+.active {
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    background:rgb(22, 22, 22);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.active:hover {
+    color: white;
+}
+
+.power-on {
+    color: lime;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(44, 44, 44);
+    border: 2px solid black;
+    cursor: pointer;
+    height: 46px;
+}
+.power-off {
+    color: red;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(44, 44, 44);
+    border: 2px solid black;
+    cursor: pointer;
+    height: 46px;
+    position: relative;
+    top: -100px;
+    
+}
+
+.power-on:hover {
+    color: lime;
+}
+
+.power-off:hover {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.media-player-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#player {
+    padding: 10px;
+}
+
+.controlpanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#control-btns {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    list-style: none;
 }

@@ -1,9 +1,15 @@
 import YoutubeApi from "./YoutubeApi";
+import TrackDatas from "./TrackDatas";
+import PowerButton from "./PowerButton";
 
 function YouTubeMedia() {
     return(
-        <div id="player">
-            <YoutubeApi />
+        <div className="main">
+            <div id="player">
+                <YoutubeApi />
+            </div>
+            <TrackDatas />
+            <PowerButton />
         </div>
     );
 }

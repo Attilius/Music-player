@@ -1,5 +1,5 @@
 import YouTubeMedia from './YouTubeMedia';
-
+import ControlPanel from './ControlPanel';
 
 function MediaPlayer() {
     return(
@@ -8,6 +8,7 @@ function MediaPlayer() {
                 <div className="main">
                     <YouTubeMedia />
                 </div>
+                <ControlPanel />
             </div>
         </div>
     );
