@@ -21,7 +21,7 @@ body {
 }
 
 .media-content {
-    width: 800px;
+    width: 60%;
     height: 350px;
     margin: auto;
     margin-top: 50px;
@@ -45,6 +45,11 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 20px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-link {
