@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import YouTubeMedia from './YouTubeMedia';
+import YouTubeMediaBox from './YouTubeMediaBox';
 import ControlPanel from './ControlPanel';
 import PowerButton from './PowerButton';
 
@@ -18,7 +18,7 @@ function MediaPlayer() {
         <div className="media-content">
             <div className="media-player-content">
                 <div className="main">
-                    <YouTubeMedia />
+                    <YouTubeMediaBox />
                     <PowerButton  className={ powerBtnClassName } onChange={ handleChangePowerBtnClassList } />
                 </div>
                 <ControlPanel />

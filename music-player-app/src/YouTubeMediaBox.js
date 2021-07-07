@@ -2,7 +2,7 @@ import YoutubeApi from "./YoutubeApi";
 import TrackDatas from "./TrackDatas";
 
 
-function YouTubeMedia() {
+function YouTubeMediaBox() {
     return(
         <div className="main">
             <div id="player">
@@ -13,4 +13,4 @@ function YouTubeMedia() {
     );
 }
 
-export default YouTubeMedia;
+export default YouTubeMediaBox;
