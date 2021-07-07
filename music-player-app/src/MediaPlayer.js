@@ -4,13 +4,16 @@ import ControlPanel from './ControlPanel';
 import PowerButton from './PowerButton';
 
 function MediaPlayer() {
-    const [powerBtnClassName, setpowerBtnClassName] = useState("power-off");
+    const [powerBtnClassName, setPowerBtnClassName] = useState("power-off");
+    const [controlBtnsClassName, setControlBtnsClassName] = useState("controlpanel");
 
     const handleChangePowerBtnClassList = () => {
         if (powerBtnClassName === "power-off") {
-            setpowerBtnClassName("power-on");
+            setPowerBtnClassName("power-on");
+            setControlBtnsClassName("controlpanel");
         } else {
-            setpowerBtnClassName("power-off");
+            setPowerBtnClassName("power-off");
+            setControlBtnsClassName("hidden");
         }
     }
 
@@ -21,7 +24,7 @@ function MediaPlayer() {
                     <YouTubeMediaBox />
                     <PowerButton  className={ powerBtnClassName } onChange={ handleChangePowerBtnClassList } />
                 </div>
-                <ControlPanel />
+                <ControlPanel className={ controlBtnsClassName } />
             </div>
         </div>
     );
