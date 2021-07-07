@@ -9,7 +9,6 @@ function PowerButton() {
         } else {
             setClassName("power-off");
         }
-        
     }
 
     return (
