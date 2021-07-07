@@ -21,7 +21,7 @@ body {
 }
 
 .media-content {
-    width: 60%;
+    width: 65%;
     height: 350px;
     margin: auto;
     margin-top: 50px;
@@ -127,7 +127,7 @@ body {
 
 .power-on {
     color: lime;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     padding: 10px;
     background: rgb(44, 44, 44);
     border: 2px solid black;
@@ -138,7 +138,7 @@ body {
 }
 .power-off {
     color: red;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     padding: 10px;
     background: rgb(44, 44, 44);
     border: 2px solid black;
