@@ -1,21 +1,11 @@
-import { useState } from 'react';
 
-function PowerButton() {
-    const [className, setClassName] = useState("power-off");
-
-    const changeClassList = () => {
-        if (className === "power-off") {
-            setClassName("power-on");
-        } else {
-            setClassName("power-off");
-        }
-    }
+function PowerButton({ className, onChange }) {
 
     return (
         <button 
             id="power_" 
             className={ className }
-            onClick={changeClassList}>
+            onClick={ onChange }>
             <i className="fas fa-power-off"></i>
         </button>
     );
