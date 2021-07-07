@@ -9,7 +9,6 @@ function YouTubeMedia() {
                 <YoutubeApi />
             </div>
             <TrackDatas />
-            
         </div>
     );
 }
