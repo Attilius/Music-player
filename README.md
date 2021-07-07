@@ -4,8 +4,5 @@ This project is an earlier created music-app based, but now I thought about crea
 
 The main components are:
 
+![](https://github.com/Attilius/Music-player/blob/main/Documentation/Component_hierarchy.jpg)
 
-
-
-
- 
