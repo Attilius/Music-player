@@ -6,11 +6,11 @@ import PowerButton from './PowerButton';
 function MediaPlayer() {
     const [powerBtnClassName, setPowerBtnClassName] = useState("power-off");
     const [controlBtnsClassName, setControlBtnsClassName] = useState("hidden");
-    const [playBtnClassName, setPlayBtnClassName] = useState("btn");
-    const [backwardBtnClassName, setBackwardBtnClassName] = useState("btn");
-    const [forwardBtnClassName, setForwardBtnClassName] = useState("btn");
-    const [stopBtnClassName, setStopBtnClassName] = useState("btn");
-    const [pauseBtnClassName, setPauseBtnClassName] = useState("btn");
+    const [playBtnClassName, setPlayBtnClassName] = useState("btn_");
+    const [backwardBtnClassName, setBackwardBtnClassName] = useState("btn_");
+    const [forwardBtnClassName, setForwardBtnClassName] = useState("btn_");
+    const [stopBtnClassName, setStopBtnClassName] = useState("btn_");
+    const [pauseBtnClassName, setPauseBtnClassName] = useState("btn_");
 
     const handleChangePowerBtnClassList = () => {
         if (powerBtnClassName === "power-off") {
@@ -28,37 +28,37 @@ function MediaPlayer() {
             switch (btnId) {
                 case "play_":
                     setPlayBtnClassName("active");
-                    setBackwardBtnClassName("btn");
-                    setForwardBtnClassName("btn");
-                    setStopBtnClassName("btn");
-                    setPauseBtnClassName("btn");
+                    setBackwardBtnClassName("btn_");
+                    setForwardBtnClassName("btn_");
+                    setStopBtnClassName("btn_");
+                    setPauseBtnClassName("btn_");
                     break;
                 case "backward_":
-                    setPlayBtnClassName("btn");
+                    setPlayBtnClassName("btn_");
                     setBackwardBtnClassName("active");
-                    setForwardBtnClassName("btn");
-                    setStopBtnClassName("btn");
-                    setPauseBtnClassName("btn");
+                    setForwardBtnClassName("btn_");
+                    setStopBtnClassName("btn_");
+                    setPauseBtnClassName("btn_");
                     break;
                 case "forward_":
-                    setPlayBtnClassName("btn");
-                    setBackwardBtnClassName("btn");
+                    setPlayBtnClassName("btn_");
+                    setBackwardBtnClassName("btn_");
                     setForwardBtnClassName("active");
-                    setStopBtnClassName("btn");
-                    setPauseBtnClassName("btn");
+                    setStopBtnClassName("btn_");
+                    setPauseBtnClassName("btn_");
                     break;
                 case "stop_":
-                    setPlayBtnClassName("btn");
-                    setBackwardBtnClassName("btn");
-                    setForwardBtnClassName("btn");
+                    setPlayBtnClassName("btn_");
+                    setBackwardBtnClassName("btn_");
+                    setForwardBtnClassName("btn_");
                     setStopBtnClassName("active");
-                    setPauseBtnClassName("btn");
+                    setPauseBtnClassName("btn_");
                     break;
                 case "pause_":
-                    setPlayBtnClassName("btn");
-                    setBackwardBtnClassName("btn");
-                    setForwardBtnClassName("btn");
-                    setStopBtnClassName("btn");
+                    setPlayBtnClassName("btn_");
+                    setBackwardBtnClassName("btn_");
+                    setForwardBtnClassName("btn_");
+                    setStopBtnClassName("btn_");
                     setPauseBtnClassName("active");
                     break;
             
@@ -68,9 +68,9 @@ function MediaPlayer() {
     }
 
     const handleMouseUp = () => {
-        setBackwardBtnClassName("btn");
-        setForwardBtnClassName("btn");
-        setStopBtnClassName("btn");
+        setBackwardBtnClassName("btn_");
+        setForwardBtnClassName("btn_");
+        setStopBtnClassName("btn_");
     }
 
     return(

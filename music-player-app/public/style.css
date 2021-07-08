@@ -98,7 +98,7 @@ body {
     margin-left: 10px;
 }
 
-.btn {
+.btn_ {
     margin: 10px;
     padding: 10px;
     /*background: rgb(44, 44, 44);*/
@@ -108,7 +108,7 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn_:hover {
     color: rgb(33, 33, 33);;
 }
 
