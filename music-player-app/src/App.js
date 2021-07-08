@@ -1,5 +1,5 @@
 import Menu from './Menu';
-import MediaPlayer from './MediaPlayer'
+import MediaPlayer from './MediaPlayer';
 
 function App() {
   return (
