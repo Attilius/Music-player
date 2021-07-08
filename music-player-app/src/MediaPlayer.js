@@ -67,6 +67,12 @@ function MediaPlayer() {
             }
     }
 
+    const handleMouseUp = () => {
+        setBackwardBtnClassName("btn");
+        setForwardBtnClassName("btn");
+        setStopBtnClassName("btn");
+    }
+
     return(
         <div className="media-content">
             <div className="media-player-content">
@@ -80,7 +86,8 @@ function MediaPlayer() {
                               forwardBtnClassName={ forwardBtnClassName }
                               stopBtnClassName={ stopBtnClassName }
                               pauseBtnClassName={ pauseBtnClassName }
-                              onChange={ handleChangeControlBtnClassName } />
+                              onChange={ handleChangeControlBtnClassName }
+                              onMouseUp={ handleMouseUp } />
             </div>
         </div>
     );
