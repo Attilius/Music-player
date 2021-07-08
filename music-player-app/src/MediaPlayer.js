@@ -11,12 +11,14 @@ function MediaPlayer() {
     const [forwardBtnClassName, setForwardBtnClassName] = useState("btn_");
     const [stopBtnClassName, setStopBtnClassName] = useState("btn_");
     const [pauseBtnClassName, setPauseBtnClassName] = useState("btn_");
+    const setters = [setPlayBtnClassName, setPauseBtnClassName ];
 
     const handleChangePowerBtnClassList = () => {
         if (powerBtnClassName === "power-off") {
             setPowerBtnClassName("power-on");
             setControlBtnsClassName("controlpanel");
         } else {
+            setters.map(setter => { return  setter("btn_"); });
             setPowerBtnClassName("power-off");
             setControlBtnsClassName("hidden");
         }
