@@ -78,16 +78,12 @@ function MediaPlayer() {
         setStopBtnClassName("btn_");
     }
 
-   const onPlay = (e) => {
-        // access to player in all event handlers via event.target
-        e.target.playVideo();
-      }
 
     return(
         <div className="media-content">
             <div className="media-player-content">
                 <div className="main">
-                    <YouTubeMediaBox youtubeId={ youtubeId } onReady={onPlay} />
+                    <YouTubeMediaBox youtubeId={ youtubeId } />
                     <PowerButton  className={ powerBtnClassName } onChange={ handleChangePowerBtnClassList } />
                 </div>
                 <ControlPanel className={ controlBtnsClassName } 
