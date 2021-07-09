@@ -12,6 +12,7 @@ function MediaPlayer() {
     const [stopBtnClassName, setStopBtnClassName] = useState("btn_");
     const [pauseBtnClassName, setPauseBtnClassName] = useState("btn_");
     const setters = [setPlayBtnClassName, setPauseBtnClassName ];
+    const [youtubeId, setYoutubeId] = useState("aGSKrC7dGcY");
 
     const handleChangePowerBtnClassList = () => {
         if (powerBtnClassName === "power-off") {
@@ -41,6 +42,7 @@ function MediaPlayer() {
                     setForwardBtnClassName("btn_");
                     setStopBtnClassName("btn_");
                     setPauseBtnClassName("btn_");
+                    setYoutubeId("aGSKrC7dGcY");
                     break;
                 case "forward_":
                     setPlayBtnClassName("btn_");
@@ -48,6 +50,7 @@ function MediaPlayer() {
                     setForwardBtnClassName("active");
                     setStopBtnClassName("btn_");
                     setPauseBtnClassName("btn_");
+                    setYoutubeId("saZPllGHzT8");
                     break;
                 case "stop_":
                     setPlayBtnClassName("btn_");
@@ -75,11 +78,16 @@ function MediaPlayer() {
         setStopBtnClassName("btn_");
     }
 
+   const onPlay = (e) => {
+        // access to player in all event handlers via event.target
+        e.target.playVideo();
+      }
+
     return(
         <div className="media-content">
             <div className="media-player-content">
                 <div className="main">
-                    <YouTubeMediaBox />
+                    <YouTubeMediaBox youtubeId={ youtubeId } onReady={onPlay} />
                     <PowerButton  className={ powerBtnClassName } onChange={ handleChangePowerBtnClassList } />
                 </div>
                 <ControlPanel className={ controlBtnsClassName } 
