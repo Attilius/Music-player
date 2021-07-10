@@ -12,14 +12,14 @@ function YouTubeMediaBox({ youtubeId, event_ }) {
           controls: 1,
         },
         onReady: (event) => {
-            if (event_ === "play") {
-                event.target.playVideo();
+            const player = event.target;
+           if (event_ === "play") {
+               player.playVideo();
             } else if (event_ === "stop") {
-                event.target.stopVideo();
+                player.stopVideo();
             } else if (event_ === "pause") {
-                event.target.pauseVideo();
+                player.pauseVideo();
             }
-            
         },
     };
 
