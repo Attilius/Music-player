@@ -13,6 +13,7 @@ function MediaPlayer() {
     const [pauseBtnClassName, setPauseBtnClassName] = useState("btn_");
     const setters = [setPlayBtnClassName, setPauseBtnClassName ];
     const [youtubeId, setYoutubeId] = useState("aGSKrC7dGcY");
+    const [controlEvent, setControlEvent] = useState("");
 
     const handleChangePowerBtnClassList = () => {
         if (powerBtnClassName === "power-off") {
@@ -35,6 +36,7 @@ function MediaPlayer() {
                     setForwardBtnClassName("btn_");
                     setStopBtnClassName("btn_");
                     setPauseBtnClassName("btn_");
+                    handlePlayControl(e);
                     break;
                 case "backward_":
                     setPlayBtnClassName("btn_");
@@ -58,6 +60,7 @@ function MediaPlayer() {
                     setForwardBtnClassName("btn_");
                     setStopBtnClassName("active");
                     setPauseBtnClassName("btn_");
+                    handlePlayControl(e);
                     break;
                 case "pause_":
                     setPlayBtnClassName("btn_");
@@ -65,6 +68,7 @@ function MediaPlayer() {
                     setForwardBtnClassName("btn_");
                     setStopBtnClassName("btn_");
                     setPauseBtnClassName("active");
+                    handlePlayControl(e);
                     break;
             
                 default:
@@ -78,12 +82,15 @@ function MediaPlayer() {
         setStopBtnClassName("btn_");
     }
 
+    const handlePlayControl = (e) => {
+        setControlEvent(e.target.className.split(' ')[1].split('-')[1]);
+    }
 
     return(
         <div className="media-content">
             <div className="media-player-content">
                 <div className="main">
-                    <YouTubeMediaBox youtubeId={ youtubeId } />
+                    <YouTubeMediaBox youtubeId={ youtubeId } event_={ controlEvent } />
                     <PowerButton  className={ powerBtnClassName } onChange={ handleChangePowerBtnClassList } />
                 </div>
                 <ControlPanel className={ controlBtnsClassName } 
